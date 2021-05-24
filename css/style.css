@@ -549,6 +549,136 @@ section.contact-home .container {
 }
 
 
+/*Areas of Expertise*/
+
+section.mainContentAreas {
+    background-image: url("../imgs/banner/banner-areas5.jpg");
+    background-repeat: no-repeat;
+    background-position: 30% 30%;
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+}
+
+.introdution {
+    width: 100%;
+    padding: 30px 2%;
+}
+
+.introdution .container {
+    max-width: 1000px;
+}
+
+.introdution .content-intro {
+    display: flex;
+    flex-direction: row;
+}
+
+.introdution .content-intro .content-intro-desc {
+    flex-basis: 50%;
+    padding: 20px;
+}
+
+.introdution .content-intro .content-intro-desc h1 {
+    font-size: 2em;
+    margin: 30px 0;
+}
+
+.introdution .content-intro .content-intro-desc p {
+    text-align: justify;
+}
+
+.introdution .content-intro .content-intro-img {
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.content-intro-img img {
+    width: 90%;
+    height: 450px;
+}
+
+section.descArea {
+    width: 100%;
+    padding: 0 2%;
+    background-color: #f5f1f1;
+}
+
+.descArea .area-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.descArea .area-content article {
+    flex-basis: 100%;
+    margin: 50px 0;
+}
+
+.area-content article h1 {
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.area-content-box {
+    flex-basis: calc(100% / 3 - 40px);
+    background-color: #ccc;
+    padding: 20px;
+    height: 550px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.box1 .icon-library::before {
+    margin-right: 0 !important;
+}
+
+.area-content-box .box1 {
+    background-color: #014667;
+    margin: 10px auto;
+    padding: 25px;
+    width: 100px;
+    height: 90px;
+    text-align: center;
+}
+
+.box1 .icon-library {
+    font-size: 2em;
+    color: #FFF;
+}
+
+.desc-area {
+    margin: 20px 0;
+    height: 350px;
+}
+
+.desc-area h2 {
+    margin-top: 50px;
+    font-size: 2em;
+    font-family: "url";
+}
+
+.desc-area p {
+    margin: 10px 0 80px;
+    font-size: 1.2em;
+    font-family: "url";
+}
+
+.desc-area a {
+    background-color: #014667;
+    padding: 20px;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.desc-area a:hover {
+    background-color: #FFF;
+    color: #014667;
+    border: 2px solid #222222;
+}
+
+
 /*FOOTER*/
 
 footer .container {
@@ -672,6 +802,31 @@ footer .container p {
         width: 90%;
         margin: 0 auto;
     }
+    section.mainContentAreas {
+        background-size: contain;
+    }
+    .introdution {
+        padding: 0px 2% 20px 0;
+    }
+    .introdution .content-intro {
+        flex-direction: column-reverse;
+    }
+    .introdution .content-intro .content-intro-desc h1 {
+        text-align: center;
+    }
+    .introdution .content-intro .content-intro-desc {
+        flex-basis: 100%;
+    }
+    .introdution .content-intro .content-intro-img {
+        flex-basis: 100%;
+    }
+    .content-intro-img img {
+        width: 90%;
+        height: auto;
+    }
+    .area-content-box {
+        flex-basis: calc(100% / 2 - 40px);
+    }
     /*FOOTER*/
     footer .container {
         padding: 50px 2%;
@@ -700,7 +855,17 @@ footer .container p {
 }
 
 
-/**/
+/*550px*/
+
+@media (max-width: 34em) {
+    .area-content-box {
+        flex-basis: 100%;
+        height: 450px;
+    }
+}
+
+
+/*500px*/
 
 @media (max-width:31em) {
     .box-img img {
@@ -736,6 +901,9 @@ footer .container p {
     .box-img img {
         width: 98%;
         height: 500px;
+    }
+    .area-content article h1 {
+        font-size: 2em;
     }
 }
 
