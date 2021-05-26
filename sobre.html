@@ -5,7 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MetheusAdvogado | Home</title>
+    <meta name="robots" content="FOLLOW,INDEX,ALL">
+    <meta name='description' content='Matheus Fernandes Advogado'>
+    <meta name='keywords' content='Matheus Fernandes, Advogado, Rio Branco, Acre, Rio Branco-AC, Advogado, Civel, familiar, trabalhista, empresarial, judicial'>
+    <meta property="og:description" content="Matheus Fernandes Advogado especialista em casos civis">
+    <meta name='author' conteot='Pablo Cassiano PDA'>
+    <meta name="copyright" content="Matheus Fernandes Advogado">
+    <meta http-equiv='expires' content='Tue, 25 May 2021 00:00:00 GMT'>
+    <meta http-equiv="content-language" content="pt-br">
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+    <meta property="og:title" content="Matheus Fernandes Advogado">
+    <meta property="og:phone_number" content="(68) 99946-7710">
+    <meta property="og:locality" content="Rio Branco">
+    <meta property="og:region" content="AC">
+    <meta property="og:image" content="imgs/logo.png">
+    <title>MetheusAdvogado | SOBRE </title>
     <link rel='shortcut icon' type='image-x/png' href='imgs/icone.png'>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/fonticon.css">
@@ -58,19 +72,18 @@
     </header>
     <main>
         <!--Banner-->
-        <section class="mainContentAbout">
-        </section>
+        <section class="mainContentAbout"></section>
 
         <!--AboutUs-->
         <section class="about-content">
             <div class="container">
                 <div class="about-content-box">
-                    <div class="box-img">
+                    <div class="box-img anime2">
                         <img src="imgs/banner/right-4944547_1920.jpg">
                     </div>
 
-                    <div class="box-desc">
-                        <h1>Profissionalismo-Ética-Especialização</h1>
+                    <div class="box-desc anime3">
+                        <h1>Profissionalismo Ética Especialização</h1>
                         <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro
                             de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado. Se popularizou na década de 60, quando a Letraset lançou decalques
                             contendo passagens de Lorem Ipsum, e mais recentemente quando passou a ser integrado a softwares de editoração eletrônica como Aldus PageMaker.</p>
@@ -132,6 +145,32 @@
 
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
+    <script>
+        $(function() {
+            //Animação 
+            var $target = $('.anime2, .anime3'),
+                animationClass = 'anime-start',
+                offset = $(window).height();
+
+            function animeScroll2() {
+                var documentTop = $(document).scrollTop();
+
+                $target.each(function() {
+                    var itemTop = $(this).offset().top;
+
+                    if (documentTop > itemTop - offset) {
+                        $(this).addClass(animationClass);
+                    }
+                });
+            }
+
+            animeScroll2();
+
+            $(document).scroll(function() {
+                animeScroll2();
+            });
+        });
+    </script>
 </body>
 
 </html>
