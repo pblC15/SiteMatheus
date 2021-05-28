@@ -69,7 +69,7 @@ header .headerMain {
     align-items: center;
     height: 100%;
     color: #014667;
-    transition: 0.5s;
+    transition: 1s;
     text-decoration: none;
 }
 
@@ -427,8 +427,8 @@ section.contact-home .container {
 }
 
 .input-w100 button:hover {
-    border: 3px solid #014667;
-    background-color: #222222;
+    border: 2px solid #FFF;
+    background-color: #014667;
     color: #FFF;
     font-weight: 900;
 }
@@ -669,11 +669,18 @@ section.descArea {
 
 .area-content-box {
     flex-basis: calc(100% / 3 - 40px);
-    background-color: #ccc;
+    background-color: #262e35;
     padding: 20px;
-    height: 550px;
+    height: 450px;
     margin: 20px 0;
     text-align: center;
+    box-shadow: -7px 7px 6px 0 rgb(0 0 0 / 50%);
+    transition: 2s;
+}
+
+.area-content-box:hover {
+    position: relative;
+    top: -10px;
 }
 
 .box1 .icon-library::before {
@@ -684,8 +691,9 @@ section.descArea {
     background-color: #014667;
     margin: 10px auto;
     padding: 25px;
-    width: 100px;
+    width: 87px;
     height: 90px;
+    border-radius: 150px;
     text-align: center;
 }
 
@@ -696,32 +704,34 @@ section.descArea {
 
 .desc-area {
     margin: 20px 0;
-    height: 350px;
+    height: 150px;
 }
 
 .desc-area h2 {
     margin-top: 50px;
     font-size: 2em;
     font-family: "url";
+    color: #FFF;
 }
 
 .desc-area p {
     margin: 10px 0 80px;
     font-size: 1.2em;
+    color: #FFF;
     font-family: "url";
 }
 
-.desc-area a {
+.area-content-box a {
     background-color: #014667;
     padding: 20px;
     color: #FFF;
     text-decoration: none;
 }
 
-.desc-area a:hover {
+.area-content-box a:hover {
     background-color: #FFF;
     color: #014667;
-    border: 2px solid #222222;
+    border-bottom: 4px solid #014667;
 }
 
 
@@ -751,11 +761,17 @@ section.descArea {
 
 .contact-content-box .box-content {
     flex-basis: calc(90% / 3 - 40px);
-    background-color: #014667;
+    background-color: #262e35;
     height: 120px;
-    border-radius: 8px;
     display: flex;
     flex-direction: row;
+    box-shadow: -5px 5px 8px 0 rgb(0 0 0 / 30%);
+}
+
+.box-icon-content .icon-mail2:before,
+.box-icon-content .icon-location:before,
+.box-icon-content .icon-blog:before {
+    margin-left: 3px;
 }
 
 .box-content .contact-box-icon {
@@ -768,6 +784,8 @@ section.descArea {
     border-radius: 50px;
     padding: 20px;
     margin-top: 10px;
+    width: 77px;
+    height: 79px;
 }
 
 .box-content .contact-box-icon .box-icon-content span {
@@ -972,7 +990,6 @@ footer .container p {
         background-repeat: no-repeat;
         width: 100%;
         height: 200px;
-        
     }
     .about-content .container .about-content-box {
         display: flex;
@@ -1039,6 +1056,24 @@ footer .container p {
     .area-content-box {
         flex-basis: calc(100% / 2 - 40px);
     }
+    /*CONTACT*/
+    .contact-content-box .box-content {
+        flex-basis: 100%;
+        margin-top: 20px;
+        height: 150px;
+    }
+    .contact-content-box .box-content:nth-of-type(2) {
+        height: 180px;
+    }
+    .box-content .contact-box-tel p {
+        font-size: 1em;
+        display: inline-block;
+        width: 100%;
+        text-align: justify;
+    }
+    .box-content .contact-box-tel h1 {
+        font-size: 1.4em;
+    }
     /*FOOTER*/
     footer .container {
         padding: 50px 2%;
@@ -1064,6 +1099,9 @@ footer .container p {
         margin: 20px auto;
         text-align: center;
     }
+    .mainContentContact {
+        background-size: contain;
+    }
 }
 
 
@@ -1083,6 +1121,41 @@ footer .container p {
     .box-img img {
         width: 98%;
         height: 600px;
+    }
+    .contact-content-box .box-content {
+        height: 250px;
+    }
+    .box-content {
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .box-content .contact-box-icon {
+        flex-basis: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .box-content .contact-box-tel {
+        flex-basis: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .contact-content-box .box-content:nth-of-type(2) {
+        height: auto !important;
+    }
+    .contact-content-box .box-content:nth-of-type(2) p {
+        margin: 30px 0 !important;
+        text-align: center;
+    }
+    .box-content .contact-box-tel p {
+        text-align: center;
+    }
+    .box-icon-content {
+        margin: 0 auto;
+        text-align: center;
+    }
+    .contact-form .container form .content-input button {
+        padding: 15px 10px;
+        margin: 20px auto;
     }
 }
 
@@ -1117,6 +1190,15 @@ footer .container p {
     .area-content article h1 {
         font-size: 2em;
     }
+    section.descArea {
+        padding: 50px 4%;
+    }
+    .contact-content-box .box-content:nth-of-type(2) {
+        height: 250px;
+    }
+    .contact-content-box .box-content:nth-of-type(2) p {
+        text-align: left;
+    }
 }
 
 
@@ -1139,5 +1221,8 @@ footer .container p {
     }
     .contact-address .address-text {
         margin-bottom: 60px;
+    }
+    .contact-content-box .box-content:nth-of-type(3) p {
+        font-size: 0.9em;
     }
 }
