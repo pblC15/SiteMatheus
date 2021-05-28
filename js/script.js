@@ -29,4 +29,7 @@ $(function() {
         animeScroll2();
     });
 
+
+    $("#id_tel").mask("(99) 99999-9999");
+
 });

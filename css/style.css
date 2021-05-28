@@ -471,7 +471,7 @@ section.contact-home .container {
 }
 
 .box-desc h1 {
-    font-size: 2em;
+    font-size: 2.2em;
     margin-bottom: 30px;
 }
 
@@ -632,6 +632,7 @@ section.mainContentAreas {
 
 .introdution .content-intro .content-intro-desc p {
     text-align: justify;
+    line-height: 24px;
 }
 
 .introdution .content-intro .content-intro-img {
@@ -847,6 +848,7 @@ section.descArea {
     outline: none;
     font-size: 1em;
     color: #222222;
+    resize: none;
 }
 
 .contact-form .container form .content-input button {
