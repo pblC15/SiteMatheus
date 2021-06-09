@@ -200,14 +200,16 @@
         //Verificando o paramentro e exibindo o alerta
         if (id1 === "success") { //Exibindo o alerta de sucesso
             swal("E-mail enviado com sucesso!", "Favor Aguardar, entrarei em contato!", "success");
-        } else if (id1 === "error") { //Exibindo o alerta de erro
+        }
+        if (id1 === "error") { //Exibindo o alerta de erro
             swal({
                 title: "Erro ao enviar o Email",
-                text: "Favor entre em contato no email: pablreis@gmail.com, informando o erro!",
+                text: "Favor entre em contato no email: pablreis@gmail.com informando o erro!",
                 icon: "error",
                 dangerMode: true,
             })
-        } else if (id1 === "alert") { //Exibindo mensagem de alerta
+        }
+        if (id1 === "alert") { //Exibindo mensagem de alerta
             swal({
                 title: "Email não enviado!",
                 text: "Informe o Email e/ou a Mensagem!",
