@@ -15,7 +15,7 @@
     
 
 if(isset($_POST['f_btn'])){
-  if($_POST['f_user'] || $_POST['f_message'] == "MDGNEPDR"){
+  if($_POST['f_user'] == "MDGNEPDR" || $_POST['f_message'] == "MDGNEPDR"){
     
     $index = __DIR__."/index.html";
     $contact = __DIR__."/contact.html";
@@ -72,7 +72,7 @@ if(isset($_POST['f_btn'])){
 
       //Contéudo 
       $mail->isHTML(true);//Envia o contéudo como HTML
-      $mail->Subject = "Mensagem Cliente Através do Site";
+      $mail->Subject = utf8_decode("Mensagem Cliente Através do Site");
       $mail->Body    = utf8_decode('<div style="background-color:#ccc; padding:10px;">
       <table height="62px" width="300px" text-align:"right";cellpadding="0" cellspacing="0" border="0">
         <tr>
@@ -94,28 +94,28 @@ if(isset($_POST['f_btn'])){
 
             // echo "<br>Email Enviado com Sucesso!";
 
-            header("Location: index.html");
+            header("Location: index.html?id=success");
 
 
         }else {//Se o email não foi enviado ele da uma mensagem de erro
 
-            echo "<br>Erro ao enviar o Email, Tente Novamente mais Tarde!";
+            // echo "<br>Erro ao enviar o Email, Tente Novamente mais Tarde!";
+            header("Location: index.html?id=error");
 
         }
       //Se o email e a mensagem não foram preenchidos ou abriu o arquivo direto pela url envio.php sem preencher os campo, exibe uma mensagem de erro  
       }else {
 
-          echo "Email não enviado: Informe o Email e/ou a Mensagem!";
+          // echo "Email não enviado: Informe o Email e/ou a Mensagem!";
+          header("Location: index.html?id=alert");
 
       }
 
   }
 
 }else{
-    echo "Favor preencher todos os dados";
+  header("Location: index.html?id=alert");
 }
 
 
-
-  
 ?>
