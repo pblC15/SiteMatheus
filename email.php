@@ -114,8 +114,10 @@ if(isset($_POST['f_btn'])){
   }
 
 }else{
+
   header("Location: index.html?id=alert");
 }
+
 
 
 ?>

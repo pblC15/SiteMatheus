@@ -176,6 +176,46 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/jquery.mask.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        //Função para obter os parametros da URL
+        var getUrlParameter = function getUrlParameter(sParam) {
+            var sPageURL = window.location.search.substring(1),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+                }
+            }
+        };
+
+        //Obtendo o parametro
+        var id1 = getUrlParameter("id");
+
+        //Verificando o paramentro e exibindo o alerta
+        if (id1 === "success") { //Exibindo o alerta de sucesso
+            swal("E-mail enviado com sucesso!", "Favor Aguardar, entrarei em contato!", "success");
+        } else if (id1 = "error") { //Exibindo o alerta de erro
+            swal({
+                title: "Erro ao enviar o Email",
+                text: "Favor entre em contato no email: pablreis@gmail.com, informando o erro!",
+                icon: "error",
+                dangerMode: true,
+            })
+        } else if (id1 = "alert") { //Exibindo mensagem de alerta
+            swal({
+                title: "Email não enviado!",
+                text: "Informe o Email e/ou a Mensagem!",
+                icon: "warning",
+                dangerMode: true,
+            })
+        }
+    </script>
 </body>
 
 </html>
